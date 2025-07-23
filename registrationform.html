@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+        table {
+            width: 50%;
+            margin: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 5px;
+        }
+        .buttons {
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+<h2 style="text-align: center;">User Registration Form</h2>
+<form action="#" method="post">
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+<th colspan="2">Registration Details</th>
+</tr>
+<tr>
+<td>Full Name:</td>
+<td><input type="text" name="full_name" placeholder="Enter your full name" required></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="password" placeholder="Enter your password" required></td>
+</tr>
+<tr>
+<td>Age:</td>
+<td><input type="number" name="age" placeholder="Enter your age" required></td>
+</tr>
+<tr>
+<td>Date of Birth:</td>
+<td><input type="date" name="dob" required></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td>
+<input type="radio" name="gender" value="male" required> Male
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="other"> Other
+</td>
+</tr>
+<tr>
+<td>Hobbies:</td>
+<td>
+<input type="checkbox" name="hobbies" value="reading"> Reading
+<input type="checkbox" name="hobbies" value="traveling"> Traveling
+<input type="checkbox" name="hobbies" value="sports"> Sports
+</td>
+</tr>
+<tr>
+<td>Country:</td>
+<td>
+<select name="country" required>
+<option value="">--Select your country--</option>
+<option value="usa">USA</option>
+<option value="india">India</option>
+<option value="uk">UK</option>
+<option value="australia">Australia</option>
+<option value="canada">Canada</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Address:</td>
+<td>
+<textarea name="address" rows="3" placeholder="Enter your address" required></textarea>
+</td>
+</tr>
+<tr class="buttons">
+<td colspan="2" style="text-align: center;">
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
