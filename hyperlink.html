@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyperlink Example</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #FF5733;
+        }
+</style>
+</head>
+<body>
+<h1>Working with Hyperlinks</h1>
+
+<p>
+        Below are examples of hyperlinks using the <code>&lt;a&gt;</code> tag and various <code>target</code> attributes:
+</p>
+
+<h2>1. Open Link in the Same Tab (Default)</h2>
+<p>
+<a href="https://www.wikipedia.org" target="_self">Visit Wikipedia</a>
+</p>
+<p>(Opens in the same browser tab by default.)</p>
+
+<h2>2. Open Link in a New Tab</h2>
+<p>
+<a href="https://www.google.com" target="_blank">Search on Google</a>
+</p>
+<p>(Opens in a new browser tab or window.)</p>
+
+<h2>3. Open Link in a Parent Frame</h2>
+<p>
+<a href="https://www.github.com" target="_parent">Explore GitHub</a>
+</p>
+<p>(Useful when the page is loaded in an iframe. Opens in the parent frame.)</p>
+
+<h2>4. Open Link in the Full Window</h2>
+<p>
+<a href="https://www.stackoverflow.com" target="_top">Stack Overflow</a>
+</p>
+<p>(Opens the link in the full browser window, breaking out of any frames.)</p>
+
+<h2>5. Email Link</h2>
+<p>
+<a href="mailto:example@example.com">Send an Email</a>
+</p>
+<p>(Opens the default email client to send an email.)</p>
+</body>
+</html>

@@ -1,0 +1,168 @@
+15:55 21-03-2025<!DOCTYPE html>
+<html>
+<head>
+<title>Profiles:</title>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #D3D3FF;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.profile {
+  background-color: azure;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0.5, 0.5, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  cursor: pointer; /* Make the profile clickable */
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile h2 {
+  margin-bottom: 5px;
+}
+
+.profile p {
+  color: #666;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color:#e0ffff;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less */
+  border-radius: 8px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .profile {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>My Friends</h1>
+
+<div class="container">
+
+  <div class="profile" onclick="openModal('friend1')">
+    <img src="friend1.jpg" alt="Friend 1">
+    <h2>Ramitha sri</h2>
+    <p>listens music and paints well</p>
+    <p>Location:Machilipatnam</p>
+  </div>
+
+  <div class="profile" onclick="openModal('friend2')">
+    <img src="friend2.jpg" alt="Friend 2">
+    <h2>Deepthi ponduri</h2>
+    <p>loves coding and reading</p>
+    <p>Location: Kavali</p>
+  </div>
+
+  <div class="profile" onclick="openModal('friend3')">
+    <img src="friend3.jpg" alt="Friend 3">
+    <h2>Yuthika</h2>
+    <p>A librarian and an author</p>
+    <p>Location: Machilipatnam</p>
+  </div>
+
+</div>
+
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modal-content-inner"> </div>  </div>
+
+</div>
+
+
+<script>
+function openModal(friendId) {
+  document.getElementById("myModal").style.display = "block";
+  let modalContent = document.getElementById("modal-content-inner");
+  if (friendId === 'friend1'){
+    modalContent.innerHTML = `
+    <img src="friend1.jpg" alt="Friend 1" style="width:200px; height: 200px; border-radius: 50%; object-fit: cover;">
+      <h2>Ramitha Golla</h2>
+      <p>23481A4291 , 15/07/2005</p>
+    `;
+  } else if (friendId === 'friend2'){
+        modalContent.innerHTML = `
+    <img src="friend2.jpg" alt="Friend 2" style="width:200px; height: 200px; border-radius: 50%; object-fit: cover;">
+      <h2>Deepthi ponduri</h2>
+      <p>23481A4289</p>
+    `;
+  }
+   else if (friendId === 'friend3'){
+        modalContent.innerHTML = `
+    <img src="friend3.jpg" alt="Friend 3" style="width:200px; height: 200px; border-radius: 50%; object-fit: cover;">
+      <h2>Yuthika Vulli</h2>
+      <p>23481A42C7 , 12/02/2007</p>
+    `;
+  }
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+// Close the modal if the user clicks outside of the modal content
+window.onclick = function(event) {
+  if (event.target == document.getElementById("myModal")) {
+    closeModal();
+  }
+}
+</script>
+
+</body>
+</html>

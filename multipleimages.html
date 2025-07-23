@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery a {
+            display: inline-block;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            border-color: #333;
+        }
+</style>
+</head>
+<body>
+<div class="gallery">
+<a href="images/fullsize1.jpg" target="_blank">
+<img src="images/thumbnail1.jpg" alt="Image 1">
+</a>
+<a href="images/fullsize2.jpg" target="_blank">
+<img src="images/thumbnail2.jpg" alt="Image 2">
+</a>
+<a href="images/fullsize3.jpg" target="_blank">
+<img src="images/thumbnail3.jpg" alt="Image 3">
+</a>
+<a href="images/fullsize4.jpg" target="_blank">
+<img src="images/thumbnail4.jpg" alt="Image 4">
+</a>
+<a href="images/fullsize5.jpg" target="_blank">
+<img src="images/thumbnail5.jpg" alt="Image 5">
+</a>
+</div>
+</body>
+</html>
